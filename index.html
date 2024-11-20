@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protein Structure Matching</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Protein Structure Matching Game</h1>
+  <p>Drag and drop the correct descriptions to their corresponding protein structures.</p>
+
+  <div class="container">
+    <!-- Protein Structures -->
+    <div class="structure" draggable="true" id="primary">Primary Structure</div>
+    <div class="structure" draggable="true" id="secondary">Secondary Structure</div>
+    <div class="structure" draggable="true" id="tertiary">Tertiary Structure</div>
+    <div class="structure" draggable="true" id="quaternary">Quaternary Structure</div>
+  </div>
+
+  <div class="container">
+    <!-- Dropzones -->
+    <div class="dropzone" id="drop-primary"></div>
+    <div class="dropzone" id="drop-secondary"></div>
+    <div class="dropzone" id="drop-tertiary"></div>
+    <div class="dropzone" id="drop-quaternary"></div>
+  </div>
+
+  <div class="container">
+    <!-- Descriptions -->
+    <div class="description" draggable="true" id="desc-primary">Linear sequence of amino acids.</div>
+    <div class="description" draggable="true" id="desc-secondary">Includes alpha-helices and beta-sheets.</div>
+    <div class="description" draggable="true" id="desc-tertiary">3D folding of a single polypeptide.</div>
+    <div class="description" draggable="true" id="desc-quaternary">Assembly of multiple subunits.</div>
+  </div>
+
+  <button onclick="checkAnswers()">Check Answers</button>
+  <p id="result"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
